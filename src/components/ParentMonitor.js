@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 // import TeacherInfo from './TeacherInfo'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card'
+import CardGroup from 'react-bootstrap/CardGroup'
 
 
 class ParentMonitor extends Component {
@@ -16,32 +18,48 @@ class ParentMonitor extends Component {
 
     render() {
         return (
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card">
-                        <img src="https://previews.123rf.com/images/puruan/puruan1702/puruan170208984/72742803-driver-avatar-icon-in-colors-.jpg" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Driver Information</h5>
-                            <p class="card-text">Driver Name</p>
-                            <p class="card-text">Driver No.</p>
-                            <p class="card-text">Driver email</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-group">
-                    <div class="card">
-                        <img src="https://image.flaticon.com/icons/png/512/67/67902.png" class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <h5 class="card-title">Student Information</h5>
-                            <p class="card-text">students name</p>
-                            <p class="card-text">students class</p>
-                            <p class="card-text"><small class="text-muted">status</small></p>
-                        </div>
-                    </div>
-                </div>
-                {/* <TeacherInfo/> */}
-            </div>
+            <>
+            <CardGroup>
+                <Card>
+                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Body>
+                        <Card.Title>Driver Information</Card.Title>
+                        <Card.Text>
+                        driver name 
+                        </Card.Text>
+                        <Card.Text>
+                        driver phone no. 
+                        </Card.Text>
+                        <Card.Text>
+                        driver email
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <Card>
+                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Body>
+                        <Card.Title>Student Information</Card.Title>
+                        <Card.Text>
+                            student name 
+                        </Card.Text>
+                        <Card.Text>
+                            student class 
+                        </Card.Text>
+                        <Card.Text>
+                            bus number 
+                        </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                        <small className="text-muted">status</small>
+                        <img variant="top" src="holder.js/100px160" alt="noImage"/>
+                    </Card.Footer>
+                </Card>
+            </CardGroup>
+          
+                {/* <TeacherInfo/> */ }
+                </>
         )
     }
 }
 export default ParentMonitor;
+
