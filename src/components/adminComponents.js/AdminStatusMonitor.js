@@ -3,7 +3,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import Figure from "react-bootstrap/Figure";
+
 class AdminStatusMonitor extends React.Component {
   handleChangeOnCheck = () => {
     ////do something when checkbox change
