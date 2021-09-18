@@ -20,6 +20,7 @@ export class AdminUserControlPanel extends Component {
     </tr>
   </thead>
   <tbody>
+    {/* map function here */}
     <tr>
       <td>User.Name</td>
       <td>Ahmad@gmail</td>

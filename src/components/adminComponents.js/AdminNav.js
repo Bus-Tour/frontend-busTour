@@ -16,13 +16,13 @@ export class AdminNav extends Component {
                         <Nav.Link eventKey="/teacher">Teachers CP</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="adminMonitor">Admin monitor</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
                         <Nav.Link eventKey="busses">Busses CP</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="useres">Useres CP</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link eventKey="adminMonitor">Admin monitor</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </div>
