@@ -8,14 +8,12 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Header/>
-        <Main/>
-        <Footer/>
+        <TeacherStudentsStatus />
       </div>
     )
   }
 }
 
-export default App
+export default App;
 
 
