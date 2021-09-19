@@ -6,8 +6,14 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.4",
     "bootstrap": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "react": "^17.0.2",
+    "react-bootstrap": "^1.6.3",
+
     "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -36,5 +42,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Bus Tour is an interactive platform for students to deliver by buses and tours, connecting parents and schools represented as the admissions of buses movement and drivers and bus assistants. And to be sure that the students safely arrived home on the watch of their parents and the admission of buses in schools.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bus-Tour/frontend-busTour.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bus-Tour/frontend-busTour/issues"
+  },
+  "homepage": "https://github.com/Bus-Tour/frontend-busTour#readme"
 }

@@ -1,0 +1,82 @@
+{
+    "busData": [
+        {
+            "busNumber": 1,
+            "busDriverName": "osama",
+            "area": "Amman",
+            "licencePlateNo": "30-65488",
+            "driverPhoneNumber": "0744489994",
+            "email": "driveremail.gmail.com",
+            "capacity": "20",
+            "id": ""
+        },
+        {
+            "busNumber": 1,
+            "busDriverName": "Ammer",
+            "area": "dabooq",
+            "licencePlateNo": "30-65488",
+            "driverPhoneNumber": "0744654478",
+            "email": "driver2email.gmail.com",
+            "capacity": "20",
+            "id": ""
+        },
+        {
+            "busNumber": 2,
+            "busDriverName": "karam",
+            "area": "sewleh",
+            "licencePlateNo": "30-65488",
+            "driverPhoneNumber": "0744432994",
+            "email": "driver3email.gmail.com",
+            "capacity": "25",
+            "id": ""
+        },
+        {
+            "busNumber": 3,
+            "busDriverName": "mohammed",
+            "area": "westAmman",
+            "licencePlateNo": "30-65488",
+            "driverPhoneNumber": "0744486694",
+            "email": "driver4email.gmail.com",
+            "capacity": "30",
+            "id": ""
+        },
+
+        {
+            "busNumber": 4,
+            "busDriverName": "Omar",
+            "area": "jbeha",
+            "licencePlateNo": "30-65488",
+            "driverPhoneNumber": "0744481194",
+            "email": "driver5email.gmail.com",
+            "capacity": "18",
+            "id": ""
+        },
+
+
+        {
+            "busNumber": 5,
+            "busDriverName": "Kareem",
+            "area": "salt",
+            "licencePlateNo": "30-65488",
+            "driverPhoneNumber": "0744467994",
+            "email": "driver6email.gmail.com",
+            "capacity": "15",
+            "id": ""
+        },
+
+
+        {
+            "busNumber": 6,
+            "busDriverName": "mahmood",
+            "area": "zai",
+            "licencePlateNo": "30-65488",
+            "driverPhoneNumber": "0744467994",
+            "email": "driver7email.gmail.com",
+            "capacity": "20",
+            "id": ""
+        }
+
+
+
+    ]
+}

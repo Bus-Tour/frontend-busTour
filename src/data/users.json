@@ -1,0 +1,99 @@
+{
+    "UsersData": [
+        {
+            "UserName": "sawsan",
+            "password": "0232333555",
+            "PhoneNum": "234435667",
+            "email": "Parentemail1@gmail.com",
+            "Privilage": "3",
+            "Type": "Parent",
+            "busNumberForteacherOnly": ""
+        },
+        {
+            "UserName": "Sameer",
+            "password": "023339555",
+            "PhoneNum": "234435669",
+            "email": "parentemail2@gmail.com",
+            "Privilage": "3",
+            "Type": "Parent",
+            "busNumberForteacherOnly": ""
+        },
+        {
+            "UserName": "Amani",
+            "password": "024400555",
+            "PhoneNum": "34546987655",
+            "email": "admin1email@gmail.com",
+            "Privilage": "1",
+            "Type": "admin",
+            "busNumberForteacherOnly": ""
+        },
+        {
+            "UserName": "samah",
+            "password": "0288789355",
+            "PhoneNum": "34546987655",
+            "email": "teacher1email@gmail.com",
+            "Privilage": "2",
+            "Type": "teacher",
+            "busNumberForteacherOnly": "3"
+        },
+        {
+            "UserName": "saeed",
+            "password": "0233457755",
+            "PhoneNum": "34546987655",
+            "email": "teacher2email@gmail.com",
+            "Privilage": "2",
+            "Type": "teacher",
+            "busNumberForteacherOnly": "2"
+        },
+        {
+            "UserName": "Samar",
+            "password": "023567895",
+            "PhoneNum": "3454345855",
+            "email": "admin2email@gmail.com",
+            "Privilage": "1",
+            "Type": "admin",
+            "busNumberForteacherOnly": ""
+        },
+
+
+        {
+            "UserName": "noor",
+            "password": "0235676695",
+            "PhoneNum": "235675667",
+            "email": "Parentemail5@gmail.com",
+            "Privilage": "3",
+            "Type": "Parent",
+            "busNumberForteacherOnly": ""
+        },           
+
+        {
+            "UserName": "Baker",
+            "password": "02rfghd5",
+            "PhoneNum": "235671117",
+            "email": "Parentemail6@gmail.com",
+            "Privilage": "2",
+            "Type": "Parent",
+            "busNumberForteacherOnly": ""
+        },
+        {
+            "UserName": "Ghadeer",
+            "password": "g787899990",
+            "PhoneNum": "234435997",
+            "email": "Parentemail4@gmail.com",
+            "Privilage": "2",
+            "Type": "Parent",
+            "busNumberForteacherOnly": ""
+        },
+        
+        {
+            "UserName": "Marah",
+            "password": "mar878766",
+            "PhoneNum": "07866874333",
+            "email": "teacher3email@gmail.com",
+            "Privilage": "2",
+            "Type": "teacher",
+            "busNumberForteacherOnly": "5"
+        }
+
+    ]
+}
