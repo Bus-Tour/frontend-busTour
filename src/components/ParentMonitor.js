@@ -44,7 +44,7 @@ class ParentMonitor extends Component {
                                     <>
                                         <CardGroup>
                                             <Card>
-                                                <Card.Img variant="top" src=""/> 
+                                                <Card.Img variant="top" src="" />
                                                 <Card.Body>
                                                     <Card.Title>Student Information</Card.Title>
                                                     <Card.Text>
@@ -56,20 +56,10 @@ class ParentMonitor extends Component {
                                                 </Card.Body>
                                                 <Card.Footer>
                                                     <Card.Text>
-                                                        {/* {
-                                                           
-                                                                if(students.status==="1"){
-                                                                    <p>status: Away</p>
-                                                                }else if (students.status==="2") {
-                                                                    <p>status: Almost there</p>
-                                                                } elseif(students.status==="3") {
-                                                                    <p>status: Arrived</p>
-                                                                }else{
-                                                                    <p>status: *** </p>
-                                                                }
-                                                            
-                                                        } */}
-                                                        status: {students.status}
+                                                        {students.status === "1" && <p>status: Away</p>}
+                                                        {students.status === "2" && <p>status: Almost there</p>}
+                                                        {students.status === "3" && <p>status: Arrived</p>}
+                                                        {/* status: {students.status} */}
                                                     </Card.Text>
                                                 </Card.Footer>
                                             </Card>
@@ -80,7 +70,7 @@ class ParentMonitor extends Component {
                         }
                     </>
                 }
-                {/* <DriverCard/> */}
+                {/* <DriverCard name={this.state.studentsData.busNo}/> */}
                 {/* <TeacherInfo/> */}
 
             </>
