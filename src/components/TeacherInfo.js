@@ -8,20 +8,25 @@ class TeacherInfo extends Component {
         super(props);
         this.state = {
             // props vlaues goes here
+        
         }
+        console.log("props",this.props)
     }
     render() {
+     
         return (
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="https://library.kissclipart.com/20181211/coq/kissclipart-teacher-clipart-doctorate-teacher-science-04d70326c24676e8.jpg" />
                 {/* Teacher Photo */}
                 <Card.Body>
-                    <Card.Title>Teacher Name</Card.Title>
+                    <Card.Title>Teacher Name:{this.props.teacherName}</Card.Title>
                     <Card.Text>
-                        Phone No. : 875632185  {/* PhoneNo from props */}                        
-                        E-mail : teacehr@mail.com  {/* E-mail from props */}                        
+                  Teacher email:  {this.props.email}
+                    </Card.Text>       
+                    <Card.Text>   
+                  Phone Number:   {this.props.phoneNumber}                  
                     </Card.Text>                    
-                    <Card.Text>Bus No.</Card.Text>
+                    <Card.Text>Bus Number:  {this.props.BusNumber}   </Card.Text>
                 </Card.Body>
             </Card>
         )
