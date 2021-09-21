@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+#logoIMG{
+    display: inline;
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+ #HeaderDiv{
+    background-color: #1B1A17;
+}
+
+#headerNav{
+    font-size: 20px;
+    display: inline;
+        float: right;
+        margin: 50px;
+        margin-right: 120px;
+
+
+}
+#HeaderUL{
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+    list-style: none;
+
+}
+a:hover{
+    color: wheat;
+}
+nav ul li a {
+    
+    text-decoration: none;
+    color: rgb(211,145,49);
+    font-size:25px;   
+}
+#Pname{
+    color: rgb(211,145,49);
+    font-size:35px;   
+    margin: 20px;
+    margin-left: 2px;
+
+    display: inline-block;
+    font-family: 'Gluten', cursive;
+}

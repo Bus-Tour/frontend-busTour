@@ -2,10 +2,7 @@
 // this feature created to show information about the busses in the Admin control panel
 import React from "react";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-// import busInfoData from "../../data/busInfo.json";
-// import studentInfoData from "../../data/student.json";
-// import userInfoData from "../../data/users.json";
+
 import ListGroup from "react-bootstrap/ListGroup";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,6 +17,7 @@ class AdminStatusMonitor extends React.Component {
       busData: [],
       userData: [],
       studentData: [],
+      busses: [],
     };
   }
 
@@ -31,7 +29,6 @@ class AdminStatusMonitor extends React.Component {
     // bus info data
     axios
       .get(`${process.env.REACT_APP_API_URL}/busInfo`).then((busResponse) => {
-        console.log("ddddd" + busResponse.data);
         this.setState({ busData: busResponse.data });
       })
       .catch((error) => alert(error.message));
@@ -42,7 +39,6 @@ class AdminStatusMonitor extends React.Component {
         // let newUserArr = userResponse.filter(
         //   (userResponse) => userResponse.data.privilege === "2"
         // );
-        console.log("ddddd" + userResponse.data);
 
         this.setState({ userData: userResponse.data });
       })
@@ -61,22 +57,29 @@ class AdminStatusMonitor extends React.Component {
   render() {
     return (
       <>
+        {console.log(this.state.busData)}
+        {console.log(this.state.userData)}
+        {console.log(this.state.studentData)}
 
         {this.state.busData.length > 0 &&
           this.state.busData.map((bus) => {
             return (
               <>
                 <div>
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Body>
+                  <Card style={{ width: "18rem" }} >
+                    <Card.Body id="card">
                       <Card.Title>
                         <h4>
+
                           {"bus No : " + bus.busNo} <br />
                           {"Driver Name : " + bus.driverName} <br />
                           {this.state.userData.map(teacher => {
+
                             if (teacher.busNoforTeacherOnly === bus.busNo) {
                               return "Teacher Name : " + teacher.userName;
                             }
+
+
                           }
 
                           )}
@@ -91,7 +94,12 @@ class AdminStatusMonitor extends React.Component {
                               {/* {console.log(student.busNo)} */}
                               <ListGroup>
                                 <ListGroup.Item>
-                                  {student.studentName} - {student.status}
+                                  <span>{student.studentName}</span>
+                                  {student.status === "1" && <span>    Away</span>}
+                                  {student.status === "2" && <span>     Almost there</span>}
+                                  {student.status === "3" && <span>     Arrived</span>}
+                                  {/* status: {students.status} */}
+
                                 </ListGroup.Item>
                               </ListGroup>
                             </div>
@@ -99,10 +107,7 @@ class AdminStatusMonitor extends React.Component {
                         }
                       })}
 
-                      <br />
-                      <br />
-                      {/* fo each card edit */}
-                      <Button variant="danger">edit</Button>
+
                     </Card.Body>
                   </Card>
                 </div>
