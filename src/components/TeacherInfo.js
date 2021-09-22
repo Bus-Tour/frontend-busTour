@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from "react-bootstrap/Card";
+import './teacherInfo.css';
 class TeacherInfo extends Component {
     constructor(props) {
         super(props);
@@ -15,12 +16,12 @@ class TeacherInfo extends Component {
     render() {
      
         return (
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="https://library.kissclipart.com/20181211/coq/kissclipart-teacher-clipart-doctorate-teacher-science-04d70326c24676e8.jpg" />
+            <Card style={{ width: '22rem' }} id="bCard">
+                <Card.Img variant="top" src="https://st3.depositphotos.com/14768666/36333/v/950/depositphotos_363337428-stock-illustration-school-teacher-avatar-icon-flat.jpg"  id="cardImage"/>
                 {/* Teacher Photo */}
-                <Card.Body>
-                    <Card.Title>Teacher Name:{this.props.teacherName}</Card.Title>
-                    <Card.Text>
+                <Card.Body id="card" >
+                    <Card.Title id ="cardTitle">Teacher Name: {this.props.teacherName}</Card.Title>
+                    <Card.Text class="text">
                   Teacher email:  {this.props.email}
                     </Card.Text>       
                     <Card.Text>   
