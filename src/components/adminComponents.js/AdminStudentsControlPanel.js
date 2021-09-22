@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+// css
+import './AdminStudentsCssCP.css'
 
 class AdminStusentControlPanel extends React.Component {
   constructor(props) {
@@ -88,7 +90,7 @@ class AdminStusentControlPanel extends React.Component {
   render() {
     return (
       <>
-        <Table striped bordered hover>
+        <Table class="table" striped bordered hover>
           <thead>
             <tr>
               <th>Student Name</th>
@@ -128,6 +130,7 @@ class AdminStusentControlPanel extends React.Component {
         <>
           <br></br>
           <br></br>
+          <div id="MainDivForm">
           <Form onSubmit={this.handelCreateStudentBtn}>
             <Form.Group className="mb-3" controlId="formStudentData" >
               <Form.Label>Student Name:</Form.Label>
@@ -149,6 +152,7 @@ class AdminStusentControlPanel extends React.Component {
             <Form.Control type="comments" name="comments" placeholder="Enter any other comments" />
             <Button variant="primary" type="submit" name="addStudentBtn">Create student</Button>
           </Form>
+          </div>
           {/* <Button variant="primary" type="submit" name="updateStudentBtn" onClick={(e) => this.handelUpdateStudentBtn()}>Update student</Button> */}
         </>
       </>
