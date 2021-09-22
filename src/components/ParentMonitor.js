@@ -7,11 +7,8 @@ import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import Table from 'react-bootstrap/Table'
 import Row from "react-bootstrap/Row"
-// import TeacherInfo from './TeacherInfo'
-// import DriverCard from './DriverCard'
-// import { element } from 'prop-types';
-//css
 import '../ParentMonitor.css'
+import { withAuth0 } from "@auth0/auth0-react";
 
 class ParentMonitor extends Component {
     constructor(props) {
@@ -19,13 +16,11 @@ class ParentMonitor extends Component {
         this.state = {
             studentsData: [],
             busData: [],
-            parentEmail: "haneen.hashlamoun@gmail.com"
         }
     }
 
     componentDidMount = () => {
-        axios.get(`${process.env.REACT_APP_API_URL}/parentsInterFace?email=${this.state.parentEmail}`).then((studentsRes) => {
-            console.log(this.state.parentEmail, studentsRes);
+        axios.get(`${process.env.REACT_APP_API_URL}/parentsInterFace?email=${this.props.auth0.user.email}`).then((studentsRes) => {
             this.setState({
                 studentsData: studentsRes.data,
             });
@@ -36,7 +31,7 @@ class ParentMonitor extends Component {
     render() {
 
         return (
-            <div id="mainDivCards">
+            <div id="mainDivCardss">
                 <Row md="1" id="RowCards">
                     <>
 
@@ -48,7 +43,7 @@ class ParentMonitor extends Component {
                                         return (
                                             <>
                                                 <CardGroup>
-                                                    <Card id="bCard">
+                                                    <Card id="bCardAA">
                                                         <Card.Img variant="top" src="" />
                                                         <Card.Body id="card">
                                                             <Card.Title>
@@ -95,4 +90,4 @@ class ParentMonitor extends Component {
         )
     }
 }
-export default ParentMonitor;
+export default withAuth0(ParentMonitor);

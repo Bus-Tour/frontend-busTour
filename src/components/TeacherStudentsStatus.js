@@ -7,7 +7,6 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import TeacherInfo from './TeacherInfo';
 import './TeacherStudentsStatus.css';
 import { withAuth0 } from "@auth0/auth0-react";
-
 class TeacherStudentsStatus extends Component {
     constructor(props) {
         super(props);
@@ -107,7 +106,7 @@ class TeacherStudentsStatus extends Component {
                                         <td>{item.comments}</td>
                                         <td>
                                             <InputGroup onChange={(e) => this.handelUpdateStatus(item, e)} >
-                                                <InputGroup.Radio aria-label="Radio button for following text input" value="1" name={item.studentName} style={{ backgroundColor: "red" }} />
+                                                <InputGroup.Radio aria-label="Radio button for following text input" value="1" name={item.studentName}  />
                                                 {" "}Stopped
                                                 <InputGroup.Radio aria-label="Radio button for following text input" value="2" name={item.studentName} />
                                                 Pending

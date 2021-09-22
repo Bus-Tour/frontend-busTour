@@ -11,6 +11,7 @@ import { withAuth0 } from "@auth0/auth0-react";
 import LoginSignUp from './LoginSignUp';
 import Alert from 'react-bootstrap/Alert'
 import axios from 'axios';
+import './Main.css';
 import {
     BrowserRouter as Router,
     Switch,
@@ -39,7 +40,7 @@ export class Main extends Component {
         const isAuth = this.props.auth0.isAuthenticated;
         // console.log(this.props.auth0.user.email);
         return (
-            <>
+            <div id="ALLL">
                 {isAuth ? (
                     < Router >
                         {this.getUserByEmail()}
@@ -65,11 +66,19 @@ export class Main extends Component {
                                     </Alert>
                                 }
                             </>
-                            : <LoginSignUp />}
+                            : <>
+                             <Alert variant="danger">
+                                        <Alert.Heading>SIGNUP</Alert.Heading>
+                                        <p>
+                                            PLEASE SIGNUP ..!
+                                        </p>
+                                    </Alert>
+                            <LoginSignUp />
+                            </>}
                     </Router>)
                     : <LoginSignUp />
                 }
-            </>
+            </div>
         )
     }
 }

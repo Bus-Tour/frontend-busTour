@@ -33,6 +33,7 @@ class AdminBusControlPanel extends React.Component {
             this.state.allBusses.push(createdBus.data);
             this.setState({ allBusses: this.state.allBusses });
         }).catch(() => alert("Something went wrong!"));
+        document.getElementById("create-course-form").reset();
     }
 
     //=============== Delete Bus ========================//
@@ -58,7 +59,7 @@ class AdminBusControlPanel extends React.Component {
     render() {
         return (
             <>
-                <Table striped bordered hover>
+                <Table id="Etable" striped bordered hover>
                     <thead>
                         <tr>
                             <th>Driver Name</th>
@@ -96,7 +97,7 @@ class AdminBusControlPanel extends React.Component {
                     <br></br>
                     <div id="MainDivForm" >
 
-                        <Form onSubmit={this.handelCreateBusBtn}>
+                        <Form onSubmit={this.handelCreateBusBtn} id="create-course-form">
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>Driver Name:</Form.Label>
                                 <Form.Control name="driverName" type="text" placeholder="Enter Driver Name" />
