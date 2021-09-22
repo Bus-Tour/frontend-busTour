@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+#FooterMainBar{
+    background-color: #1B1A17;
+    height: 200px;
+    position: relative;
+
+}
+#FooterContactUs{
+    display: block;
+    margin: 30px;
+    margin-bottom: 2px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bolder;
+    color: rgb(211,145,49);
+
+}
+.FooterLi{
+    display: block;
+    font-family: 'Comfortaa', cursive;
+    
+        margin: 10px;
+    margin-left: 20px;
+    list-style: none;
+
+}
+.FooterLi a:hover{
+    color: wheat;
+}
+.FooterLi a{
+    text-decoration: none;
+    color: rgb(211,145,49);
+    font-size: 20px;
+}
+#FooterContentLeft{
+    width: 30%;
+    position: absolute;
+    left: 130px;
+    top: 5px;
+}
+#centerFooter{
+    text-align: left;
+    width: 30%;
+    position: absolute;
+    top: 5px;
+    left: 500px;
+
+}
+#FooterContentRight{
+    width: 30%;
+    float: right;
+}
+#FooterLogoIMG{
+    margin-bottom: 10px;
+position: absolute;
+top: 30px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+right: 160px;
+}
+#FooterUL{
+    display: block;
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+
+
+thead{
+    font-family: 'Comfortaa', cursive;
+    background-color: #1B1A17;
+    color: #FFC288;
+    font-size: 20px;
+    text-align:center;
+}
+tbody{
+    background-color: #FFC288 ;
+    text-align: left;
+    font-size: 18px;
+}
+th{
+    height: 50px;
+}
+td{
+    height: 40px;
+    
+}
+#table{
+    width: 60%;
+    /* margin-left: 25%; */
+    position: absolute;
+    top:200px;
+   left: 520px;
+
+}
+#lastth{
+    width:160px;
+}
+.Radio{
+    background-color: #D8B384;
+}

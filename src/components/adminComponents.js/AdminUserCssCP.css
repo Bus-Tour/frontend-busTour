@@ -1,0 +1,23 @@
+thead{
+    font-family: 'Comfortaa', cursive;
+    background-color: #1B1A17;
+    color: #FFC288;
+    font-size: 20px;
+    text-align:center;
+}
+tbody{
+    background-color: #FFC288 ;
+    text-align: left;
+    font-size: 18px;
+}
+th{
+    height: 50px;
+    
+}
+td{
+    height: 40px;
+}
+#div{
+    width: 70%;
+    margin-left: 14%;
+}
