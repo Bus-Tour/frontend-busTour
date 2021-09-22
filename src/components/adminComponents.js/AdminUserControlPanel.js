@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import Table from 'react-bootstrap/Table'
 // import Dropdown from 'react-bootstrap/Dropdown'
 import Form from 'react-bootstrap/Form'
-
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
+import './AdminUserCssCP.css';
 export class AdminUserControlPanel extends Component {
   constructor(props) {
     super(props);
@@ -31,17 +31,17 @@ export class AdminUserControlPanel extends Component {
 
   //////////////update user ////////////////
 
-  handelUpdateUser = async(user,e) => {
+  handelUpdateUser = async (user, e) => {
     await this.setState({ selectedUserDataObj: user });
     // this.handelUpdateUser();
     const reqBody = {
-      userName:this.state.selectedUserDataObj.userName ,
+      userName: this.state.selectedUserDataObj.userName,
       password: this.state.selectedUserDataObj.password,
-      email:this.state.selectedUserDataObj.email ,
-      phoneNo:this.state.selectedUserDataObj.phoneNo,
-      privilege:e.target.value ,
-      type:this.state.selectedUserDataObj.type,
-      busNoforTeacherOnly:this.state.selectedUserDataObj.busNoforTeacherOnly,
+      email: this.state.selectedUserDataObj.email,
+      phoneNo: this.state.selectedUserDataObj.phoneNo,
+      privilege: e.target.value,
+      type: this.state.selectedUserDataObj.type,      
+      busNoforTeacherOnly: this.state.selectedUserDataObj.busNoforTeacherOnly,
     };
     console.log(user.userName + 'I am the user and thw prev' + user.privilege)
 
@@ -80,12 +80,12 @@ export class AdminUserControlPanel extends Component {
 
       this.setState({ useresdata: userResponse.data });
     }).catch(error => alert(error.message));
-    
+
   }
   render() {
     console.log(this.state.useresdata);
     return (
-      <div>
+      <div id="div">
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -101,34 +101,24 @@ export class AdminUserControlPanel extends Component {
             {/* map function here */}
             {
               this.state.useresdata.map(user => {
-                return(
-                <tr>
-                  <td>{user.userName}</td>
-                  <td>{user.email}</td>
-                  <td>{user.phoneNo}</td>
-                  <td>{user.type}</td>
-                  <td>
-                    
-                    {/* <Dropdown onChange={() => this.handelUpdateUser(user)} name="privilege" >
-                      <Dropdown.Toggle variant="success" id="dropdown-basic" >
-                        None
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu>
-                        <Dropdown.Item value="1" >Admin</Dropdown.Item>
-                        <Dropdown.Item  value="3">Parent</Dropdown.Item>
-                        <Dropdown.Item value="2">Teacher</Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown> */}
-                    <Form.Control as="select" name="privilege" onChange={(e) => this.handelUpdateUser(user,e)}>
-                  <option value='1'>Admin</option>
-                  <option value='3'>Parent</option>
-                  <option value='2'>Teacher</option>
-                   </Form.Control>
-                  </td>
-                  <td>
-                    <Button variant="danger" onClick={() => this.handelDeleteuser(user._id)} >Delete</Button>
-                  </td>
-                </tr>
+                return (
+                  <tr>
+                    <td>{user.userName}</td>
+                    <td>{user.email}</td>
+                    <td>{user.phoneNo}</td>
+                    <td>{user.type}</td>
+                    <td>
+                      <Form.Control as="select" name="privilege" defaultValue={user.privilege} onChange={(e) => this.handelUpdateUser(user, e)}>
+                        <option value='1' selected={user.privilege === "1"}>Admin</option>
+                        <option value='3' selected={user.privilege === "3"}>Parent</option>
+                        <option value='2' selected={user.privilege === "2"}>Teacher</option>
+                        <option value='' selected={user.privilege === ""}>not assigned</option>
+                      </Form.Control>
+                    </td>
+                    <td>
+                      <Button variant="danger" onClick={() => this.handelDeleteuser(user._id)} >Delete</Button>
+                    </td>
+                  </tr>
                 )
               })
             }
