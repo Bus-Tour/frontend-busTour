@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+//CSS
+import './AdminTeacherCssCP.css'
 class AdminTeacherControlPanel extends React.Component {
   constructor(props) {
     super(props)
@@ -73,7 +75,7 @@ class AdminTeacherControlPanel extends React.Component {
     })
     return (
       <>
-        <Table striped bordered hover>
+        <Table class="table" striped bordered hover>
           <thead>
             <tr>
               <th>Teacher Name</th>
