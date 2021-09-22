@@ -25,6 +25,7 @@
     list-style: none;
 
 }
+
 a:hover{
     color: wheat;
 }
@@ -39,7 +40,6 @@ nav ul li a {
     font-size:35px;   
     margin: 20px;
     margin-left: 2px;
-
     display: inline-block;
-    font-family: 'Gluten', cursive;
+    font-family: 'Comfortaa', cursive;
 }

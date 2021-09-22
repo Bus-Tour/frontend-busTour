@@ -17,12 +17,17 @@
 }
 .FooterLi{
     display: block;
-    font-family: 'Comfortaa', cursive;
+    /* font-family: 'Comfortaa', cursive; */
     
         margin: 10px;
     margin-left: 20px;
     list-style: none;
 
+}
+.FooterLiLeft{
+    display: inline-flex;
+    margin: 10px;
+justify-content: space-between;
 }
 .FooterLi a:hover{
     color: wheat;
@@ -43,7 +48,7 @@
     width: 30%;
     position: absolute;
     top: 5px;
-    left: 500px;
+    left: 42%;
 
 }
 #FooterContentRight{
@@ -61,4 +66,13 @@ right: 160px;
 }
 #FooterUL{
     display: block;
+}
+/* #FooterULLeft{
+} */
+.FooterLogoImgContactUs{
+    border-radius: 50%;
+    background-color: wheat;
+    height: 40px;
+    width: 40px;
+    display: inline;
 }
