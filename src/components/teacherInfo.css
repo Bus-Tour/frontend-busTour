@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 
-#bCard{
+#cCard{
     margin-top: 4%;
     margin-left: 4%;
-    color: #FFC288 ;
+    /* color: #FFC288 ; */
     font-size: small;
     border: none;
-margin-bottom: 4%;}
+margin-bottom: 4%;
+display: inline-block;
+}
 
 
 

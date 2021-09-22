@@ -1,5 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 #card{
     font-family: 'Comfortaa', cursive;
-    background-color:rgb(211,145,49) ;
+    background-color:rgb(223, 200, 189) ;
+    font-size: 20px;
+}
+.cardTitle{
+    padding: 3px;
+    font-size: 19px;
+}
+#CardStdItem{
+    font-size: 20px;
+}
+#tableStdRow{
+    font-weight: bold;
+    font-size: 17px;
+    background-color: rgb(248, 245, 248);
+}
+#bCard{
+    display: inline-block; 
+    display: inline-flex; 
+    margin: 30px;
+    background-color:rgb(223, 200, 189) ;
+
+}
+#AddTxtCard{
+    text-align: center;
+}
+
+#mainDivCards{
+    width: 70%;
+    margin-left: 15.5%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }

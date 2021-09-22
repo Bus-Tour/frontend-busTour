@@ -1,35 +1,20 @@
-import React, { Component } from 'react'
-import Nav from 'react-bootstrap/Nav'
+import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+import { Navbar, NavItem } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './AdminNav.css'
 export class AdminNav extends Component {
     render() {
         return (
-            <div>
-                <Nav
-                    activeKey="/home"
-                    onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-                >
-                    <Nav.Item>
-                        <Nav.Link href="/students">Students CP</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="/teacher">Teachers CP</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="busses">Busses CP</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="useres">Useres CP</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="adminMonitor">Admin monitor</Nav.Link>
-                    </Nav.Item>
-                </Nav>
-            </div>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" id="NavBarAdmin">
+                <NavItem><Link to="/user" className="nav-link">Useres Control Panel</Link></NavItem>
+                <NavItem><Link to="/students" className="nav-link">Students Control Panel</Link></NavItem>
+                <NavItem><Link to="/teacher" className="nav-link">Teachers Control Panel</Link></NavItem>
+                <NavItem><Link to="/busses" className="nav-link">Busses Control Panel</Link></NavItem>
+                <NavItem><Link to="/" className="nav-link">Admin monitor</Link></NavItem>
+            </Navbar>
         )
     }
 }
-
 export default AdminNav
-
 //THIS WILL IMPORTED ON THE MAIN

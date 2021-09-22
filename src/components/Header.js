@@ -1,10 +1,13 @@
 import React from 'react';
-import img from './img/bus-tour-logo2.png';
-import './Header.css'
-
+import img from './img/bus-tour-logo.png';
+import './Header.css';
+import { withAuth0 } from "@auth0/auth0-react";
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
 class Header extends React.Component {
 
     render() {
+        const isAuth = this.props.auth0.isAuthenticated;
         return (
             <div id="HeaderDiv">
 
@@ -12,7 +15,11 @@ class Header extends React.Component {
                 <h2 id="Pname">BUS TOUR</h2>
                 <nav id="headerNav">
                     <ul id="HeaderUL">
-                        <li><a href="/login">Login</a></li>
+                        <li>
+                            {
+                                isAuth ? <LogoutButton /> : <LoginButton />
+                            }
+                        </li>
                     </ul>
                 </nav>
 
@@ -22,4 +29,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default withAuth0(Header);

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@600&display=swap');
 #logoIMG{
     display: inline;
     margin: 20px;
@@ -14,17 +15,18 @@
     font-size: 20px;
     display: inline;
         float: right;
-        margin: 50px;
+        /* margin: 50px; */
         margin-right: 120px;
-
+    margin-top: 3%;
 
 }
 #HeaderUL{
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Stick No Bills', sans-serif;
     text-decoration: none;
     list-style: none;
 
 }
+
 a:hover{
     color: wheat;
 }
@@ -39,7 +41,5 @@ nav ul li a {
     font-size:35px;   
     margin: 20px;
     margin-left: 2px;
-
     display: inline-block;
-    font-family: 'Gluten', cursive;
-}
+    font-family: 'Stick No Bills', sans-serif;}

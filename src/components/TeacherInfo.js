@@ -16,7 +16,7 @@ class TeacherInfo extends Component {
     render() {
      
         return (
-            <Card style={{ width: '22rem' }} id="bCard">
+            <Card style={{ width: '22rem' }} id="cCard">
                 <Card.Img variant="top" src="https://st3.depositphotos.com/14768666/36333/v/950/depositphotos_363337428-stock-illustration-school-teacher-avatar-icon-flat.jpg"  id="cardImage"/>
                 {/* Teacher Photo */}
                 <Card.Body id="card" >

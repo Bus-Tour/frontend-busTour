@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import './AdminBusControlPanel.css'
+
 
 class AdminBusControlPanel extends React.Component {
     constructor(props) {
@@ -31,6 +33,7 @@ class AdminBusControlPanel extends React.Component {
             this.state.allBusses.push(createdBus.data);
             this.setState({ allBusses: this.state.allBusses });
         }).catch(() => alert("Something went wrong!"));
+        document.getElementById("create-course-form").reset();
     }
 
     //=============== Delete Bus ========================//
@@ -56,7 +59,7 @@ class AdminBusControlPanel extends React.Component {
     render() {
         return (
             <>
-                <Table striped bordered hover>
+                <Table id="Etable" striped bordered hover>
                     <thead>
                         <tr>
                             <th>Driver Name</th>
@@ -92,26 +95,28 @@ class AdminBusControlPanel extends React.Component {
                 <>
                     <br></br>
                     <br></br>
+                    <div id="MainDivForm" >
 
-                    <Form onSubmit={this.handelCreateBusBtn}>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Driver Name:</Form.Label>
-                            <Form.Control name="driverName" type="text" placeholder="Enter Driver Name" />
-                            <Form.Label> Area:</Form.Label>
-                            <Form.Control name="area" type="text" placeholder="Enter bus number" />
-                            <Form.Label>Driver Email:</Form.Label>
-                            <Form.Control name="driverEmail" type="text" placeholder="Enter email" />
-                            <Form.Label> Driver Phone Number:</Form.Label>
-                            <Form.Control name="driverPhoneNo" type="text" placeholder="Enter Phone number" />
-                            <Form.Label> Bus Number:</Form.Label>
-                            <Form.Control name="busNo" type="text" placeholder="Enter bus number" />
-                            <Form.Label> license Plate No:</Form.Label>
-                            <Form.Control name="licensePlateNo" type="text" placeholder="Enter bus license Plate No." />
-                            <Form.Label> Capacity:</Form.Label>
-                            <Form.Control name="capacity" type="text" placeholder="Enter Capacity" />
-                            <Button variant="primary" type="submit" >Create Bus</Button>
-                        </Form.Group>
-                    </Form>
+                        <Form onSubmit={this.handelCreateBusBtn} id="create-course-form">
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Driver Name:</Form.Label>
+                                <Form.Control name="driverName" type="text" placeholder="Enter Driver Name" />
+                                <Form.Label> Area:</Form.Label>
+                                <Form.Control name="area" type="text" placeholder="Enter bus number" />
+                                <Form.Label>Driver Email:</Form.Label>
+                                <Form.Control name="driverEmail" type="text" placeholder="Enter email" />
+                                <Form.Label> Driver Phone Number:</Form.Label>
+                                <Form.Control name="driverPhoneNo" type="text" placeholder="Enter Phone number" />
+                                <Form.Label> Bus Number:</Form.Label>
+                                <Form.Control name="busNo" type="text" placeholder="Enter bus number" />
+                                <Form.Label> license Plate No:</Form.Label>
+                                <Form.Control name="licensePlateNo" type="text" placeholder="Enter bus license Plate No." />
+                                <Form.Label> Capacity:</Form.Label>
+                                <Form.Control name="capacity" type="text" placeholder="Enter Capacity" />
+                                <Button variant="primary" type="submit" >Create Bus</Button>
+                            </Form.Group>
+                        </Form>
+                    </div>
                 </>
             </>
         )
