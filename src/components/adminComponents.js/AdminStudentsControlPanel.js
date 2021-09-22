@@ -44,6 +44,7 @@ class AdminStusentControlPanel extends React.Component {
       this.state.allStudents.push(createdStudent.data);
       this.setState({ allStudents: this.state.allStudents });
     }).catch(() => alert("Something went wrong!"));
+    document.getElementById("create-course-form").reset();
   }
   //=============== Update BusNo Student ===================//
   handeleOnChaneBus = async (student, e) => {
@@ -131,7 +132,7 @@ class AdminStusentControlPanel extends React.Component {
           <br></br>
           <br></br>
           <div id="MainDivForm">
-          <Form onSubmit={this.handelCreateStudentBtn}>
+          <Form onSubmit={this.handelCreateStudentBtn} id="create-course-form">
             <Form.Group className="mb-3" controlId="formStudentData" >
               <Form.Label>Student Name:</Form.Label>
               <Form.Control type="StudentName" name="studentName" id="studentName" placeholder="Enter Student Name" required />

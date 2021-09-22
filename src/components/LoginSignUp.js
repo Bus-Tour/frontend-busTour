@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-// import Dropdown from 'react-bootstrap/Dropdown'
-import '../components/LoginSignUp.css'
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+// import Dropdown from 'react-bootstrap/Dropdown';
+import '../components/LoginSignUp.css';
+// import Alert from 'react-bootstrap/Alert';
 
 
 class LoginSignUp extends Component {
@@ -31,9 +32,15 @@ class LoginSignUp extends Component {
         axios.post(`${process.env.REACT_APP_API_URL}/user`, reqBody).then(createduserObject => {
             this.state.useresdata.push(createduserObject.data);
             this.setState({ useresdata: this.state.useresdata });
+            this.successfulAlert();
         }).catch(() => alert("Something went wrong!"));
-    }
+        document.getElementById("create-course-form").reset();
 
+    }
+    
+    successfulAlert=()=>{
+return alert("successful")
+}
     ///////////////////////////////////////////////////////////////////////////////////////////////////
 
     componentDidMount = () => {
@@ -46,7 +53,7 @@ class LoginSignUp extends Component {
     render() {
         return (
             <div id="MainDivForm">
-                <Form onSubmit={this.handelSubmitSignIn}>
+                <Form onSubmit={this.handelSubmitSignIn} id="create-course-form">
                     <Form.Group className="mb-3" controlId="formBasicEmail"  >
                         <Form.Label>User Name</Form.Label>
                         <Form.Control type="text" placeholder="Enter your name" name="userName" />
@@ -60,7 +67,7 @@ class LoginSignUp extends Component {
                         <Form.Control type="password" placeholder="Password" name="userPassword" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail" >
-                        <Form.Label>Phon NUmber</Form.Label>
+                        <Form.Label>Phone Number</Form.Label>
                         <Form.Control type="text" placeholder="Enter your phone number" name="phonNum" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail" >

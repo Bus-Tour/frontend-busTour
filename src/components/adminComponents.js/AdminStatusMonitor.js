@@ -116,6 +116,7 @@ class AdminStatusMonitor extends React.Component {
                                   <tbody>
                                     <tr>
                                       <td id="tableStdRow"> <span>{student.studentName}</span>
+                                      <br/>
                                         {student.status === "1" && <span> 🔴    Away</span>}
                                         {student.status === "2" && <span>  🟠    Almost there</span>}
                                         {student.status === "3" && <span>  🟢    Arrived</span>}</td>

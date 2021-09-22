@@ -1,0 +1,19 @@
+#NavBarAdmin{
+    /* width: 90%; */
+    /* margin-left: 5%; */
+    background-color: #1B1A17;
+    color: rgb(211,145,49);
+    text-align: center;
+    margin-top: 0%;
+}
+.nav-link{
+    text-align: center;
+    color: rgb(211,145,49);
+    font-size:20px;   
+    font-weight: bold;
+    margin-left: 60px;
+
+}
+ .nav-link:hover{
+    color: wheat;
+}

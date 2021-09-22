@@ -23,15 +23,18 @@ td{
 }
 #table{
     width: 60%;
-    /* margin-left: 25%; */
-    position: absolute;
-    top:200px;
-   left: 520px;
-
+    display: inline-block;
+    margin-left: 0%;
+     /* margin-left: 35%;  */
+    /* position: absolute; */
+    /* top:200px; */
+   /* left: 520px; */
+margin-top: -627px;
+margin-left: 35%;
 }
 #lastth{
     width:160px;
 }
 .Radio{
     background-color: #D8B384;
-}
+} 
