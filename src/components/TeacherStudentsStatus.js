@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table';
 import InputGroup from 'react-bootstrap/InputGroup'
 import TeacherInfo from './TeacherInfo';
+import './TeacherStudentsStatus.css';
+import { withAuth0 } from "@auth0/auth0-react";
 
 class TeacherStudentsStatus extends Component {
     constructor(props) {
@@ -45,9 +47,11 @@ class TeacherStudentsStatus extends Component {
 
         }).catch(() => alert("Something went wrong!"));
     }
+
     componentDidMount = () => {
 
-        axios.get(`${process.env.REACT_APP_API_URL}/getUserByEmail?email=${"rawnaqaburummn@gmail.com"}`).then((teacherByEmailResponse) => {
+        axios.get(`${process.env.REACT_APP_API_URL}/getUserByEmail?email=${this.props.auth0.user.email}`).then((teacherByEmailResponse) => {
+
             this.setState({
                 teacherByEmail: teacherByEmailResponse.data,
                 dataReady: true
@@ -70,6 +74,9 @@ class TeacherStudentsStatus extends Component {
     render() {
         return (
             <>
+
+
+
                 {this.state.dataReady &&
                     <TeacherInfo teacherName={this.state.teacherByEmail[0].userName}
                         phoneNumber={this.state.teacherByEmail[0].phoneNo}
@@ -77,118 +84,46 @@ class TeacherStudentsStatus extends Component {
                         BusNumber={this.state.teacherByEmail[0].busNoforTeacherOnly} />
 
                 }
+                <div>
+                    <Table striped bordered hover id="table">
+                        <thead class="tableHeader">
 
-                <Table striped bordered hover>
-                    <thead>
+                            <tr >
+                                <th>Student Name</th>
+                                <th>Parent Info/ Phone No.</th>
+                                <th>Parent Info/ E-mail</th>
+                                <th>Comments</th>
+                                <th id="lastth">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.state.studentArray.map((item) => {
+                                return (
+                                    <tr id={item.id}>
 
-                        <tr>
-                            <th>Student Name</th>
-                            <th>Parent Info/ Phone No.</th>
-                            <th>Parent Info/ E-mail</th>
-                            <th>Comments</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.state.studentArray.map((item) => {
-                            return (
-                                <tr id={item.id}>
+                                        <td class="tableRow">{item.studentName}</td>
+                                        <td>{item.parentPhoneNo}</td>
+                                        <td>{item.email}</td>
+                                        <td>{item.comments}</td>
+                                        <td>
+                                            <InputGroup onChange={(e) => this.handelUpdateStatus(item, e)} >
+                                                <InputGroup.Radio aria-label="Radio button for following text input" value="1" name={item.studentName} style={{ backgroundColor: "red" }} />
+                                                {" "}Stopped
+                                                <InputGroup.Radio aria-label="Radio button for following text input" value="2" name={item.studentName} />
+                                                Pending
+                                                <InputGroup.Radio aria-label="Radio button for following text input" value="3" name={item.studentName} />
+                                                Arrived
+                                            </InputGroup>
+                                        </td>
+                                    </tr>
+                                )
+                            })}
 
-                                    <td>{item.studentName}</td>
-                                    <td>{item.parentPhoneNo}</td>
-                                    <td>{item.email}</td>
-                                    <td>{item.comments}</td>
-                                    <td>
-                                        <InputGroup onChange={(e) => this.handelUpdateStatus(item, e)}>
-                                            <InputGroup.Radio aria-label="Radio button for following text input" value="1" name={item.studentName} />
-                                            {" "}Stopped
-                                            <InputGroup.Radio aria-label="Radio button for following text input" value="2" name={item.studentName} />
-                                            Pending
-                                            <InputGroup.Radio aria-label="Radio button for following text input" value="3" name={item.studentName} />
-                                            Arrived
-                                        </InputGroup>
-                                    </td>
-                                </tr>
-                            )
-                        })}
-
-                    </tbody>
-                </Table>
+                        </tbody>
+                    </Table>
+                </div>
             </>
         )
     }
 }
-export default TeacherStudentsStatus;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default withAuth0(TeacherStudentsStatus);
